@@ -1,0 +1,150 @@
+{
+	"info": {
+		"name": "APItest",
+		"_postman_id": "4d484533-c995-ea9b-53a6-d793ff866578",
+		"description": "批量运行",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c91f2d43-1c9f-4bc0-a6a1-ce5d18ba6d43",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://www.kuaidi100.com/query?type=zhongtong&postid=992715971827773324",
+					"protocol": "http",
+					"host": [
+						"www",
+						"kuaidi100",
+						"com"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "zhongtong",
+							"equals": true
+						},
+						{
+							"key": "postid",
+							"value": "992715971827773324",
+							"equals": true
+						}
+					]
+				},
+				"description": "get请求接口"
+			},
+			"response": []
+		},
+		{
+			"name": "post_query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "96c1adcd-5843-4d25-83ee-1f8dd75ca91c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "postcode",
+							"value": "215001",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "key",
+							"value": "709fe1c4eb1819e475b32bb0f0f9353f",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pagesize",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://v.juhe.cn/postcode/query",
+					"protocol": "http",
+					"host": [
+						"v",
+						"juhe",
+						"cn"
+					],
+					"path": [
+						"postcode",
+						"query"
+					]
+				},
+				"description": "post_query"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1a621b53-f957-4bf0-a5ea-24422497d74c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "74000d0e-8bbe-4e73-aa2b-05c3fa7aa026",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
